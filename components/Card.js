@@ -60,7 +60,7 @@ export default function Card({ title, price, rating, reviews, image, variant = "
         // Vertical card sm
         if (size === "sm") {
             return (
-                <div className="p-2 rounded-xl shadow-md w-45 my-1">
+                <div className="p-2 rounded-xl shadow-md w-45">
                     <img src={image} alt={title} className="w-45 h-45 aspect-square object-cover rounded-xl" />
 
                     {/* Title and Price */}

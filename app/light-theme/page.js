@@ -6,8 +6,8 @@ import CategoryNav from "@/components/CategoryNav";
 
 export default function Home() {
   return (
-    <div className="md:flex md:justify-center bg-black">
-      <div className="text-black bg-[#F5F5F5] min-h-screen md:w-md md:pt-2 pb-5">
+    <div className="flex justify-center bg-[#F5F5F5]">
+      <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
         <Nav title="Welcome"/>
         <CategoryNav />
         <NewArrival />

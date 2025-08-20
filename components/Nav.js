@@ -8,13 +8,13 @@ export const playfairDisplay = Playfair_Display({
   weight: ["600"],
 });
 
-export default function Nav({title}) {
+export default function Nav({title, link="#"}) {
   return (
     <div className="py-3 mx-5">
       <nav className="relative flex items-center justify-center">
 
         {/* Back Button */}
-        <Link href="#" className="absolute left-0">
+        <Link href={link} className="absolute left-0">
           <KeyboardBackspaceIcon sx={{ fontSize: 30 }} className="text-black cursor-pointer"/>
         </Link>
 
