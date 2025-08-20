@@ -67,10 +67,10 @@ export default function Card({ title, price, rating, reviews, image, variant = "
                     <div className="mt-2 flex items-center justify-between">
                         <h3 className={`${playfairDisplay.className} text-xl text-black`}>{title}</h3>
                         <div className="flex flex-col items-end">
-                            <span className={`${plusJakartaSans.className} text-[#76777C] font-[400] text-sm`}>
+                            <span className={`${plusJakartaSans.className} text-[#76777C] font-[400] text-xs`}>
                                 Price
                             </span>
-                            <span className={`${plusJakartaSans.className} text-[#76777C] font-[500] text-md`}>
+                            <span className={`${plusJakartaSans.className} text-[#76777C] font-[500] text-sm`}>
                                 ${price}
                             </span>
                         </div>

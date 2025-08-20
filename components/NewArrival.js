@@ -33,7 +33,7 @@ export default function NewArrival() {
     return (
         <div className="mx-5">
             {/* New Arrival */}
-            <SeeMore title="New Arrival" link="#" />
+            <SeeMore title="New Arrival" link="/light-theme/new-arrival" />
 
             {/* Show spinner while loading */}
             {loading ? (

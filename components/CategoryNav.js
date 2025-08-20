@@ -19,7 +19,7 @@ export default function CategoryNav() {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
-        <div className="w-full overflow-x-auto py-5">
+        <div className="w-full overflow-x-auto py-5 mx-5">
             
             {/* Horizontal scrollable container for category items */}
             <div className="flex space-x-4 min-w-max scroll-smooth">

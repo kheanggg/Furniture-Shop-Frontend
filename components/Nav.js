@@ -1,6 +1,5 @@
 import Link from "next/link";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import CategoryNav from "./CategoryNav";
 import { Playfair_Display } from "next/font/google";
 
 export const playfairDisplay = Playfair_Display({
@@ -9,7 +8,7 @@ export const playfairDisplay = Playfair_Display({
   weight: ["600"],
 });
 
-export default function HomeNav() {
+export default function Nav({title}) {
   return (
     <div className="py-3 mx-5">
       <nav className="relative flex items-center justify-center">
@@ -21,12 +20,9 @@ export default function HomeNav() {
 
         {/* Welcome Text */}
         <h3 className={`${playfairDisplay.className} text-2xl text-black`}>
-          Welcome
+          {title}
         </h3>
       </nav>
-
-      {/* Category Navigation */}
-      <CategoryNav/>
     </div>
   );
 }
