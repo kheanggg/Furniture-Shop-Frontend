@@ -6,6 +6,10 @@
   --foreground: #171717;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Bind variables to Tailwind theme */
 @theme inline {
   --color-background: var(--background);
