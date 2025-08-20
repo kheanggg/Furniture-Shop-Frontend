@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Spinner from "./Spinner";
 
-export default function ProductList({ cards, loading }) {
+export default function ProductList({ cards, loading, type }) {
   if (loading) {
     return <Spinner />; // show spinner while loading
   }
@@ -11,7 +11,7 @@ export default function ProductList({ cards, loading }) {
   }
 
   return (
-    <div className="mx-5 grid grid-cols-2 gap-5">
+    <div className="max-w-md min-w-xs grid grid-cols-2 gap-5 mx-5">
       {cards.map((card, index) => (
         <Card
           key={index}
@@ -20,8 +20,8 @@ export default function ProductList({ cards, loading }) {
           rating={card.rating}
           reviews={card.reviews}
           image={card.image}
-          variant={card.variant || "vertical"}
-          size="sm"
+          type="favorite"
+          isFavorite={card.isFavorite}
         />
       ))}
     </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import ProductList from "@/components/ProductList";
 
-export default function NewArrival() {
+export default function Collection() {
     // Example JSON data (replace with your own products)
     const sampleCards = [
         {
@@ -77,7 +77,7 @@ export default function NewArrival() {
     return (
         <div className="flex justify-center bg-[#F5F5F5]">
             <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
-                <Nav title="New Arrival" link="/light-theme"/>
+                <Nav title="Collection" link="/light-theme"/>
                 <ProductList cards={cards} loading={false}/>
             </div>
         </div>
