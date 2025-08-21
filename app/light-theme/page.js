@@ -5,8 +5,8 @@ import Favorite from "@/components/Favorite";
 import CategoryNav from "@/components/CategoryNav";
 
 export default function Home() {
-  // Example JSON data
-  const cards = [
+  // JSON data
+  const products = [
     {
       id: 1,
       title: "Ailya Chair",
@@ -44,9 +44,9 @@ export default function Home() {
         <div className="mx-5">
           <CategoryNav />
         </div>
-        <NewArrival cards={cards} loading={false} />
-        <Collection cards={cards} loading={false} />
-        <Favorite cards={cards} loading={false} />
+        <NewArrival products={products} loading={false} />
+        <Collection products={products} loading={false} />
+        <Favorite products={products} loading={false} />
       </div>
     </div>
   );

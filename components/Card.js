@@ -97,8 +97,9 @@ export default function Card({ title, price, rating, reviews, image, type = "ver
                         sx={{ 
                             backgroundColor: '#59B168', 
                             color: 'white', 
-                            fontSize: '12px',
-                            fontWeight: 300
+                            fontSize: '11px',
+                            fontWeight: 300,
+                            px: 0.3,
                         }}
                     />
                 </div>

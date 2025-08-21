@@ -5,7 +5,7 @@ import SeeMore from "@/components/SeeMore";
 import Card from "@/components/Card";
 import Spinner from "@/components/Spinner";
 
-export default function Favorite({ cards = [], loading = false }) {
+export default function Favorite({ products = [], loading = false }) {
     return (
         <div className="mx-5 pt-5">
             {/* Favorite */}
@@ -16,16 +16,16 @@ export default function Favorite({ cards = [], loading = false }) {
             ) : (
                 <div className="w-full overflow-x-auto">
                     <div className="flex space-x-4 min-w-max scroll-smooth">
-                        {cards.map((card, index) => (
+                        {products.map((product, index) => (
                             <div key={index} className="flex-shrink-0">
-                                <Link href={`/light-theme/product/${card.id}`}>
+                                <Link href={`/light-theme/product/${product.id}`}>
                                     <Card
-                                        title={card.title}
-                                        price={card.price}
-                                        rating={card.rating}
-                                        reviews={card.reviews}
-                                        image={card.image}
-                                        variant={card.variant || "vertical"}
+                                        title={product.title}
+                                        price={product.price}
+                                        rating={product.rating}
+                                        reviews={product.reviews}
+                                        image={product.image}
+                                        variant={product.variant || "vertical"}
                                         type="vertical small"
                                     />
                                 </Link>

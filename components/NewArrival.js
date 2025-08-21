@@ -5,7 +5,7 @@ import SeeMore from "@/components/SeeMore";
 import Card from "@/components/Card";
 import Spinner from "@/components/Spinner";
 
-export default function NewArrival({ cards = [], loading = false }) {
+export default function NewArrival({ products = [], loading = false }) {
     return (
         <div className="mx-5">
             {/* New Arrival */}
@@ -18,15 +18,15 @@ export default function NewArrival({ cards = [], loading = false }) {
                 <div className="w-full overflow-x-auto">
                     {/* Horizontal scrollable container for cards */}
                     <div className="flex space-x-4 min-w-max scroll-smooth">
-                        {cards.map((card, index) => (
+                        {products.map((product, index) => (
                             <div key={index} className="flex-shrink-0">
-                                <Link href={`/light-theme/product/${card.id}`}>
+                                <Link href={`/light-theme/product/${product.id}`}>
                                     <Card
-                                        title={card.title}
-                                        price={card.price}
-                                        rating={card.rating}
-                                        reviews={card.reviews}
-                                        image={card.image}
+                                        title={product.title}
+                                        price={product.price}
+                                        rating={product.rating}
+                                        reviews={product.reviews}
+                                        image={product.image}
                                         type="vertical"
                                     />
                                 </Link>
