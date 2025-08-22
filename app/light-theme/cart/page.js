@@ -1,0 +1,43 @@
+import Nav from "@/components/Nav";
+import Cart from "@/components/Cart";
+import CheckoutButton from "@/components/CheckoutButton";
+
+export default function CartPage() {
+
+    // JSON data
+  const products = [
+    {
+      id: 1,
+      title: "Ailya Chair",
+      price: 168,
+      quantity: 1,
+      image: "/table.png",
+      color: "Cream",
+    },
+    {
+      id: 2,
+      title: "Lumi Table",
+      price: 199,
+      quantity: 3,
+      image: "/table2.png",
+      color: "Black",
+    },
+    {
+      id: 3,
+      title: "Modern Sofa",
+      price: 300,
+      quantity: 2,
+      image: "/table.png",
+      color: "Brown",
+    },
+  ];
+
+  return (
+    <div className="flex justify-center bg-[#F5F5F5]">
+      <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
+        <Nav title="Your Cart" link="/light-theme"/>
+        <Cart products={products}/>
+      </div>
+    </div>
+  );
+}

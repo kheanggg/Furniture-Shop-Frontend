@@ -4,7 +4,7 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import ProductList from "@/components/ProductList";
 
-export default function Collection() {
+export default function CollectionPage() {
     // Example JSON data (replace with your own products)
     const sampleCards = [
         {

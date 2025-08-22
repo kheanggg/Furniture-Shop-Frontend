@@ -12,7 +12,7 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["200", "500"],
 });
 
-export default function AddToCart({ product }) {
+export default function AddToCartButton({ product }) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
