@@ -1,8 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import SeeMore from "@/components/SeeMore";
-import Card from "@/components/Card";
+import SeeMore from "@/components/Home/SeeMore";
+import Card from "@/components/Product/Card";
 import Spinner from "@/components/Spinner";
 
 export default function NewArrival({ products = [], loading = false }) {

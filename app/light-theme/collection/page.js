@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Nav from "@/components/Nav";
-import ProductList from "@/components/ProductList";
+import ProductList from "@/components/Product/ProductList";
 
 export default function CollectionPage() {
     // Example JSON data (replace with your own products)

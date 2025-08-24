@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import SeeMore from "./SeeMore";
-import Card from "./Card";
-import Spinner from "./Spinner"; // import the reusable spinner
+import Card from "../Product/Card";
+import Spinner from "../Spinner"; // import the reusable spinner
 
 export default function Collection({ products = [], loading = false }) {
     return (

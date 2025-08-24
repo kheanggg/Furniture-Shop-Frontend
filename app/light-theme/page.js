@@ -1,8 +1,8 @@
 import Nav from "@/components/Nav";
-import NewArrival from "@/components/NewArrival";
-import Collection from "@/components/Collection";
-import Favorite from "@/components/Favorite";
-import CategoryNav from "@/components/CategoryNav";
+import NewArrival from "@/components/Home/NewArrival";
+import Collection from "@/components/Home/Collection";
+import Favorite from "@/components/Home/Favorite";
+import CategoryNav from "@/components/Home/CategoryNav";
 
 export default function Home() {
   // JSON data

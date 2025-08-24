@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import ChairIcon from "./icons/chair.svg";
-import SofaIcon from "./icons/sofa.svg";
-import LampIcon from "./icons/lamp.svg";
-import CabinetIcon from "./icons/cabinet.svg";
+import ChairIcon from "../icons/chair.svg";
+import SofaIcon from "../icons/sofa.svg";
+import LampIcon from "../icons/lamp.svg";
+import CabinetIcon from "../icons/cabinet.svg";
 
 export default function CategoryNav() {
 

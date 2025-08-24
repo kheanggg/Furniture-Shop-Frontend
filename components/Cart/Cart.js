@@ -2,8 +2,8 @@
 
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import CartCard from "./CartCard";
-import Spinner from "./Spinner";
-import Total from "./Total";
+import Spinner from "../Spinner";
+import Total from "../Total";
 import CheckoutButton from "./CheckoutButton";
 
 import { useState } from "react";

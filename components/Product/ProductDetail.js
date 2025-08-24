@@ -2,8 +2,8 @@
 
 import ProductMedia from "./ProductMedia";
 import ProductDescription from "./ProductDescription";
-import AddToCart from "./AddToCartButton";
-import Nav from "./Nav";
+import AddToCart from "../Cart/AddToCartButton";
+import Nav from "../Nav";
 
 export default function ProductDetail({ product }) {
     return (

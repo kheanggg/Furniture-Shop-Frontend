@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
-import Cart from "@/components/Cart";
-import CheckoutButton from "@/components/CheckoutButton";
+import Cart from "@/components/Cart/Cart";
+import CheckoutButton from "@/components/Cart/CheckoutButton";
 
 export default function CartPage() {
 

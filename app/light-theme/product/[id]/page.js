@@ -1,4 +1,4 @@
-import ProductDetail from "@/components/ProductDetail";
+import ProductDetail from "@/components/Product/ProductDetail";
 
 export default function Product({ params }) {
   const { id } = params;

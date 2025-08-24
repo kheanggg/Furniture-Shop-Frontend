@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Card from "./Card";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 
 export default function ProductList({ cards, loading, type }) {
   if (loading) {
