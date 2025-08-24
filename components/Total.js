@@ -12,19 +12,23 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["200", "400", "700"],
 });
 
-export default function Total({ products }) {
+export default function Total({ products, dark = false }) {
   // Calculate total price dynamically
   const totalPrice = products.reduce((sum, p) => sum + p.price * p.quantity, 0);
 
+  const lineColor = dark ? "bg-[#212121]" : "bg-gray-300";
+  const textPrimary = dark ? "text-white" : "text-black";
+  const textHighlight = dark ? "text-[#59B168]" : "text-[#59B168]";
+
   return (
-    <div className="min-w-sm max-w-md">
+    <div className="w-full">
       {/* Line */}
-      <div className="h-[1px] w-full bg-gray-300 rounded-full my-4"></div>
+      <div className={`h-[1px] w-full ${lineColor} rounded-full my-4`}></div>
 
       {/* Total */}
       <div className="flex justify-between items-center text-lg font-semibold">
-        <span className={`${playfairDisplay.className} text-xl`}>Total</span>
-        <span className={`${plusJakartaSans.className} text-xl text-[#59B168]`}>
+        <span className={`${playfairDisplay.className} text-xl ${textPrimary}`}>Total</span>
+        <span className={`${plusJakartaSans.className} text-xl ${textHighlight}`}>
           ${totalPrice}
         </span>
       </div>

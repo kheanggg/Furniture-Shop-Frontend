@@ -28,7 +28,7 @@ export default function AddToCartButton({ product }) {
   return (
     <>
       <button
-        className={`${plusJakartaSans.className} w-full bg-black text-white py-3 rounded-xl font-[500] hover:bg-gray-800 transition`}
+        className={`${plusJakartaSans.className} w-full bg-[#171717] text-white py-3 rounded-xl font-[500] hover:bg-gray-800 transition`}
         onClick={handleClick}
       >
         Add to Cart

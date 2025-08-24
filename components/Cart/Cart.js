@@ -20,9 +20,7 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["200", "400", "700"],
 });
 
-export default function Cart({ products: initialProducts , loading}) {
-
-  // Initialize state with initial products
+export default function Cart({ products: initialProducts, loading, dark = false }) {
   const [products, setProducts] = useState(initialProducts);
 
   // Calculate total products count
@@ -31,22 +29,25 @@ export default function Cart({ products: initialProducts , loading}) {
   // Handle quantity change
   const handleQuantityChange = (id, newQuantity) => {
     if (newQuantity <= 0) {
-      // Remove item
       setProducts(products.filter((p) => p.id !== id));
     } else {
-      // Update quantity
       setProducts(products.map((p) => (p.id === id ? { ...p, quantity: newQuantity } : p)));
     }
   };
 
   if (loading) {
-    return <Spinner />; // show spinner while loading
+    return <Spinner dark={dark} />; // show spinner while loading
   }
 
+  // Dark mode classes
+  const textPrimary = dark ? "text-white" : "text-black";
+  const textSecondary = dark ? "text-gray-400" : "text-[#76777C]";
+  const bg = dark ? "bg-[#212121]" : "bg-white";
+
   return (
-    <div className="relative min-w-sm max-w-md mx-5 mt-5">
+    <div className={`relative min-w-sm max-w-md mx-5 mt-5 ${bg} p-5 rounded-xl`}>
       {/* Total products count */}
-      <span className={`${plusJakartaSans.className} text-[#76777C] font-[400] text-sm`}>
+      <span className={`${plusJakartaSans.className} ${textSecondary} font-[400] text-sm`}>
         Total product ({totalProducts})
       </span>
 
@@ -62,20 +63,21 @@ export default function Cart({ products: initialProducts , loading}) {
                 image={product.image}
                 color={product.color}
                 onQuantityChange={(newQty) => handleQuantityChange(product.id, newQty)}
+                dark={dark}
               />
             </div>
           ))}
 
           {/* Dynamic total */}
-          <Total products={products} />
+          <Total products={products} dark={dark} />
 
           {/* Checkout button */}
           <div className="mx-5 mt-10">
-            <CheckoutButton products={products} />
+            <CheckoutButton products={products} dark={dark} />
           </div>
         </>
       ) : (
-        <p className="text-center text-gray-500 mt-5">Your cart is empty.</p>
+        <p className={`${textSecondary} text-center mt-5`}>Your cart is empty.</p>
       )}
     </div>
   );

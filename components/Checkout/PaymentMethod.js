@@ -13,12 +13,18 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["200", "400", "700"],
 });
 
-export default function PaymentMethod() {
+export default function PaymentMethod({ dark = false }) {
   return (
-    <div className="p-5 bg-white rounded-lg shadow-lg">
+    <div
+      className={`p-5 rounded-lg shadow-lg ${
+        dark ? "bg-[#212121] text-white" : "bg-white text-black"
+      }`}
+    >
       {/* Title + More icon */}
       <div className="flex items-center mb-4">
-        <MoreVertIcon sx={{ fontSize: 22, color: "#BDBDBD", cursor: "pointer" }} />
+        <MoreVertIcon
+          sx={{ fontSize: 22, color: dark ? "#BDBDBD" : "#BDBDBD", cursor: "pointer" }}
+        />
         <h2 className={`${playfairDisplay.className} text-xl font-bold ml-2`}>
           Payment Method
         </h2>
@@ -35,7 +41,7 @@ export default function PaymentMethod() {
 
         {/* Text on the right */}
         <div className="ml-4">
-          <p className={`${plusJakartaSans.className} text-gray-600`}>
+          <p className={`${plusJakartaSans.className} ${dark ? "text-gray-300" : "text-gray-600"}`}>
             Open your banking app and scan the QR code to complete your payment.
           </p>
         </div>

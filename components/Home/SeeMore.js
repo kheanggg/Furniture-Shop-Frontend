@@ -8,22 +8,27 @@ export const playfairDisplay = Playfair_Display({
   weight: ["600"],
 });
 
-export default function SeeMore({ title, link }) {
+export default function SeeMore({ title, link, dark = false }) {
+  const textColor = dark ? "text-gray-300 hover:text-white" : "text-gray-500 hover:text-black";
+  const titleColor = dark ? "text-white" : "text-black";
+
   return (
     <>
-        {link && (
-            <Link href={link} className="text-sm text-gray-500 hover:text-black">
-                <div className="flex items-center justify-between pb-3">
-                    {/* Title */}
-                    <h3 className={`${playfairDisplay.className} text-2xl text-black`}>
-                        {title}
-                    </h3>
+      {link && (
+        <Link href={link} className={`text-sm ${textColor}`}>
+          <div className="flex items-center justify-between pb-3">
+            {/* Title */}
+            <h3 className={`${playfairDisplay.className} text-2xl ${titleColor}`}>
+              {title}
+            </h3>
 
-                    {/* See More Icon */}
-                    <KeyboardBackspaceIcon className="transform scale-x-[-1]" />
-                </div>
-            </Link>
-        )}
+            {/* See More Icon */}
+            <KeyboardBackspaceIcon
+              className={`transform scale-x-[-1] ${dark ? "text-white" : "text-black"}`}
+            />
+          </div>
+        </Link>
+      )}
     </>
   );
 }

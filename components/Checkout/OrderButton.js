@@ -8,10 +8,11 @@ export const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["200", "500"],
 });
 
-export default function OrderButton({ product }) {
+export default function OrderButton({ dark = false }) {
   return (
     <button
-      className={`${plusJakartaSans.className} w-full bg-black text-white py-3 rounded-xl font-[500] hover:bg-gray-800 transition`}
+      className={`${plusJakartaSans.className} w-full py-3 rounded-xl font-[500] transition
+        ${dark ? "bg-[#3A3A3A] text-white hover:bg-[#212121]" : "bg-black text-white hover:bg-gray-800"}`}
     >
       Proceed Order
     </button>

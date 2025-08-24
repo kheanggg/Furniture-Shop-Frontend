@@ -5,18 +5,22 @@ import SeeMore from "./SeeMore";
 import Card from "../Product/Card";
 import Spinner from "../Spinner"; // import the reusable spinner
 
-export default function Collection({ products = [], loading = false }) {
+export default function Collection({ products = [], loading = false, dark = false }) {
     return (
         <div className="mx-5 pt-5">
             {/* Collection */}
-            <SeeMore title="Collection" link="/light-theme/collection" />
+            <SeeMore 
+                title="Collection" 
+                link={dark ? "/dark-theme/collection" : "/light-theme/collection"} 
+                dark={dark} 
+            />
 
             {/* Show spinner while loading */}
             {loading ? (
-                <Spinner />
+                <Spinner dark={dark} />
             ) : (
                 products && products.length > 0 && (
-                    <Link href={`/light-theme//product/${products[0].id}`}>
+                    <Link href={`/${dark ? "dark-theme" : "light-theme"}/product/${products[0].id}`}>
                         <Card
                             title={products[0].title}
                             price={products[0].price}
@@ -24,6 +28,7 @@ export default function Collection({ products = [], loading = false }) {
                             reviews={products[0].reviews}
                             image={products[0].image}
                             type="horizontal"
+                            dark={dark}
                         />
                     </Link>
                 )
