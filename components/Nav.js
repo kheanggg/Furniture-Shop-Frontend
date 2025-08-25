@@ -1,5 +1,6 @@
 import Link from "next/link";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import SearchIcon from '@mui/icons-material/Search';
 import { Playfair_Display } from "next/font/google";
 
 export const playfairDisplay = Playfair_Display({
@@ -8,7 +9,7 @@ export const playfairDisplay = Playfair_Display({
   weight: ["600"],
 });
 
-export default function Nav({ title, link = "", dark = false }) {
+export default function Nav({ title, link = "", dark = false, search = false }) {
   // choose colors based on dark mode
   const textColor = dark ? "text-white" : "text-black";
 
@@ -27,6 +28,13 @@ export default function Nav({ title, link = "", dark = false }) {
         <h3 className={`${playfairDisplay.className} text-2xl ${textColor}`}>
           {title}
         </h3>
+
+        {search && (
+          <SearchIcon
+            sx={{ fontSize: 30 }}
+            className={`${textColor} cursor-pointer absolute right-0`}
+          />
+        )}
       </nav>
     </div>
   );

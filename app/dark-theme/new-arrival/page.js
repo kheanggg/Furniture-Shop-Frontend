@@ -77,7 +77,7 @@ export default function NewArrivalPage() {
     return (
         <div className="flex justify-center bg-[#212121]">
             <div className="text-black bg-[#212121] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
-                <Nav title="New Arrival" link="/dark-theme" dark/>
+                <Nav title="New Arrival" link="/dark-theme" dark search/>
                 <ProductList cards={cards} loading={false} dark/>
             </div>
         </div>

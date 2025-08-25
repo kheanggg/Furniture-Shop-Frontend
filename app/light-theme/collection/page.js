@@ -77,7 +77,7 @@ export default function CollectionPage() {
     return (
         <div className="flex justify-center bg-[#F5F5F5]">
             <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
-                <Nav title="Collection" link="/light-theme"/>
+                <Nav title="Collection" link="/light-theme" search/>
                 <ProductList cards={cards} loading={false}/>
             </div>
         </div>

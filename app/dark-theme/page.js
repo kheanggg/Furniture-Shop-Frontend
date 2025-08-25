@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className="flex justify-center bg-[#212121]">
       <div className="text-black bg-[#212121] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
-        <Nav title="Welcome" dark />
+        <Nav title="Welcome" dark search />
         <div className="mx-5">
           <CategoryNav dark />
         </div>
