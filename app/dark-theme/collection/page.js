@@ -75,10 +75,10 @@ export default function CollectionPage() {
     const [cards] = useState(sampleCards);
 
     return (
-        <div className="flex justify-center bg-[#F5F5F5]">
-            <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
-                <Nav title="Collection" link="/light-theme"/>
-                <ProductList cards={cards} loading={false}/>
+        <div className="flex justify-center bg-[#2A2A2A]">
+            <div className="text-black bg-[#2A2A2A] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
+                <Nav title="Collection" link="/dark-theme" dark/>
+                <ProductList cards={cards} loading={false} dark/>
             </div>
         </div>
     );
