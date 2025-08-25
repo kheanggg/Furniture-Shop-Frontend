@@ -73,7 +73,7 @@ export default function Card({
   // Favorite card
   if (type === "favorite") {
     return (
-      <div className={`p-2 rounded-xl shadow-md w-45 ${cardBg}`}>
+      <div className={`p-2 rounded-xl shadow-md w-full ${cardBg}`}>
         <img src={image} alt={title} className="w-45 h-45 aspect-square object-cover rounded-xl" />
 
         {/* Title and Price */}

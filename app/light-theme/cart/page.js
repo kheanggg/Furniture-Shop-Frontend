@@ -34,7 +34,7 @@ export default function CartPage() {
 
   return (
     <div className="flex justify-center bg-[#F5F5F5]">
-      <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs md:pt-2 pb-5">
+      <div className="text-black bg-[#F5F5F5] min-h-screen max-w-md min-w-xs w-full md:pt-2 pb-5">
         <Nav title="Your Cart" link="/light-theme"/>
         <Cart products={products}/>
       </div>

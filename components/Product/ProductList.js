@@ -12,21 +12,24 @@ export default function ProductList({ cards, loading, type, dark = false }) {
   }
 
   return (
-    <div className="max-w-md min-w-xs grid grid-cols-2 gap-5 mx-5">
-      {cards.map((card, index) => (
-        <Link key={index} href={`/${dark ? "dark-theme" : "light-theme"}/product/${card.id}`}>
-          <Card
-            title={card.title}
-            price={card.price}
-            rating={card.rating}
-            reviews={card.reviews}
-            image={card.image}
-            type={type || "favorite"} // keep type flexible
-            isFavorite={card.isFavorite}
-            dark
-          />
-        </Link>
-      ))}
+    <div className="flex justify-center mx-5">
+      <div className="w-full grid grid-cols-2 gap-5">
+        {cards.map((card, index) => (
+          <Link key={index} href={`/${dark ? "dark-theme" : "light-theme"}/product/${card.id}`}>
+            <Card
+              title={card.title}
+              price={card.price}
+              rating={card.rating}
+              reviews={card.reviews}
+              image={card.image}
+              type={type || "favorite"} // keep type flexible
+              isFavorite={card.isFavorite}
+              dark = {dark}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
+    
   );
 }

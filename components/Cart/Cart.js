@@ -45,40 +45,43 @@ export default function Cart({ products: initialProducts, loading, dark = false 
   const bg = dark ? "bg-[#212121]" : "bg-white";
 
   return (
-    <div className={`relative min-w-sm max-w-md mx-5 mt-5 ${bg} p-5 rounded-xl`}>
-      {/* Total products count */}
-      <span className={`${plusJakartaSans.className} ${textSecondary} font-[400] text-sm`}>
-        Total product ({totalProducts})
-      </span>
+    <div className="flex justify-center mt-5 mx-5">
+      <div className={`w-full ${bg} p-5 rounded-xl`}>
+        {/* Total products count */}
+        <span className={`${plusJakartaSans.className} ${textSecondary} font-[400] text-sm`}>
+          Total product ({totalProducts})
+        </span>
 
-      {totalProducts > 0 ? (
-        <>
-          {/* Render all cart items */}
-          {products.map((product) => (
-            <div key={product.id} className="my-5">
-              <CartCard
-                title={product.title}
-                price={product.price}
-                quantity={product.quantity}
-                image={product.image}
-                color={product.color}
-                onQuantityChange={(newQty) => handleQuantityChange(product.id, newQty)}
-                dark={dark}
-              />
+        {totalProducts > 0 ? (
+          <>
+            {/* Render all cart items */}
+            {products.map((product) => (
+              <div key={product.id} className="my-5">
+                <CartCard
+                  title={product.title}
+                  price={product.price}
+                  quantity={product.quantity}
+                  image={product.image}
+                  color={product.color}
+                  onQuantityChange={(newQty) => handleQuantityChange(product.id, newQty)}
+                  dark={dark}
+                />
+              </div>
+            ))}
+
+            {/* Dynamic total */}
+            <Total products={products} dark={dark} />
+
+            {/* Checkout button */}
+            <div className="mx-5 mt-10">
+              <CheckoutButton products={products} dark={dark} />
             </div>
-          ))}
+          </>
+        ) : (
+          <p className={`${textSecondary} text-center mt-5`}>Your cart is empty.</p>
+        )}
+      </div>
 
-          {/* Dynamic total */}
-          <Total products={products} dark={dark} />
-
-          {/* Checkout button */}
-          <div className="mx-5 mt-10">
-            <CheckoutButton products={products} dark={dark} />
-          </div>
-        </>
-      ) : (
-        <p className={`${textSecondary} text-center mt-5`}>Your cart is empty.</p>
-      )}
     </div>
   );
 }
